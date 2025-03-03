@@ -1,4 +1,25 @@
-<section class="time_calculator container">
-    <h2 class="title-time_calculator">Калькулятор часу</h2>
-    <input type="number" class="time_calculator-input"> 
-</section>
+<section data-sect="numerical" class="time_calculator">
+    <div class="container">
+      <h3 class="time-title">Калькулятор часу</h3>
+      <div class="time-box">
+        <form action="" class="time-form">
+          <input
+            class="time-input input"
+            type="text"
+            name="number"
+            id="number"
+            placeholder="Введіть число"
+            data-time-input
+          />
+          <button class="time-btn" data-time-btn>
+            <svg class="svg--alt svg--stroke--alt" width="15" height="15">
+              <use href="src/svg/search.svg"></use>
+            </svg>
+          </button>
+        </form>
+        <hr class="time-hr" />
+        <p class="time-text" data-time-result>3 дн. 15:45:01</p>
+      </div>
+    </div>
+  </section>
+  <hr style="width: 536px; height: 1px; border: none" />

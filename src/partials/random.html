@@ -1,4 +1,17 @@
-<section class="random container">
-    <h2 class="title-random">Вгадай число яке загадав комп'ютер</h2>
-    <input type="number" class="random-input"> 
+<section data-sect="numerical" class="random">
+    <div class="container">
+        <h2 class="title-random">Вгадай число, яке загадав комп'ютер</h2>
+        <div class="">
+            <form class="random-form">
+                <input class="random-input input" type="text" placeholder="Введіть число" data-guess-input />
+                <button class="random_btn" data-guess-btn type="button">
+                    <svg class="svg-alt svg-stroke-alt" width="15" height="15">
+                        <use href="svg/search.svg"></use>
+                    </svg>
+                </button>
+            </form>
+            <p class="random_text" data-guess-result>Вітаю, ви вгадали число! (number)</p>
+        </div>
+    </div>
 </section>
+<hr style="width: 536px; height: 1px; border: none" />
