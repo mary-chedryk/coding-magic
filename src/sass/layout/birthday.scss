@@ -1,0 +1,28 @@
+.birthday {
+  width: 161px;
+}
+.title-birthday {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+.birthday-text {
+  color: #039900;
+  text-align: right;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-weight: 400;
+}
+.birthday-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  width: 536px;
+  stroke-width: 1px;
+  stroke: #000;
+}
