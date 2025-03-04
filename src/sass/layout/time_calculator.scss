@@ -1,0 +1,50 @@
+.time-title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.time-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    gap: 33px;
+}
+
+.time-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.time-input {
+    padding: 10px;
+    width: 150px;
+    font-size: 12px;
+}
+
+.time-btn {
+    position: absolute;
+    padding: 9px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+}
+
+.time-hr {
+    border-top: 1px dashed var(--alt-text-color);
+    width: 100px;
+    position: static;
+    margin: 0;
+}
+
+.time-text {
+    color: var(--text-color);
+}
