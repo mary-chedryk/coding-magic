@@ -2,56 +2,35 @@
   <div class="container">
     <div class="header__container">
       <svg class="header__logo svg svg--stroke" width="95" height="40">
-        <use href="./src/img/icons.svg#icon-logo"></use>
+        <use href="img/svg/logo.svg"></use>
       </svg>
       <nav class="header__nav">
         <ul class="header__nav-list list">
           <li class="header__nav-item">
             <a class="header__nav-link link" data-dropdown-open>
               Інтерактив
-              <svg
-                class="header__nav-arrow"
-                width="15"
-                height="15"
-                data-dropdown-arrow
-              >
-                <use href="./src/img/icons.svg#icon-dropdown-arrow"></use>
+              <svg class="header__nav-arrow" width="15" height="15" data-dropdown-arrow>
+                <use href="img/svg/arrow.svg"></use>
               </svg>
             </a>
             <ul class="header__dropdown" data-dropdown>
               <li class="header__dropdown-item">
-                <button
-                  type="button"
-                  class="header__dropdown-btn"
-                  data-changeBtn="all"
-                >
+                <button type="button" class="header__dropdown-btn" data-changeBtn="all">
                   Всі
                 </button>
               </li>
               <li class="header__dropdown-item">
-                <button
-                  type="button"
-                  class="header__dropdown-btn"
-                  data-changeBtn="numerical"
-                >
+                <button type="button" class="header__dropdown-btn" data-changeBtn="numerical">
                   Числовий
                 </button>
               </li>
               <li class="header__dropdown-item">
-                <button
-                  type="button"
-                  class="header__dropdown-btn"
-                  data-changeBtn="game"
-                >
+                <button type="button" class="header__dropdown-btn" data-changeBtn="game">
                   Ігровий
                 </button>
               </li>
               <li class="header__dropdown-item">
-                <button
-                  type="button"
-                  class="header__dropdown-btn"
-                  data-changeBtn="acquaintance"
-                >
+                <button type="button" class="header__dropdown-btn" data-changeBtn="acquaintance">
                   Ознайомчий
                 </button>
               </li>
@@ -68,14 +47,9 @@
     </div>
     <div class="header__theme">
       <button type="button" class="header__theme-btn" data-theme-switcher>
-        <img
-          class="header__theme-img header__theme-img--light"
-          src="./src/img/themeLight.png"
-          alt="theme image"
-        />
+        <img class="header__theme-img header__theme-img--light" src="./img/svg/sun.svg" alt="theme image" />
       </button>
       <p class="header__welcome-text" data-welcome-open>Вітаємо, User!</p>
     </div>
   </div>
 </header>
-
