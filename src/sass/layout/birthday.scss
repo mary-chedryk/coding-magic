@@ -1,13 +1,14 @@
 .birthday {
-  width: 161px;
 }
 .title-birthday {
   color: #000;
   font-family: "Montserrat Alternates";
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
   display: flex;
   justify-content: center;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 .birthday-text {
   color: #039900;
@@ -19,6 +20,7 @@
 .birthday-div {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 36px;
 }
 
 .line {
