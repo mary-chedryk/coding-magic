@@ -1,17 +1,41 @@
 <section data-sect="numerical" class="random">
+
+    <h2 class="title-random">Вгадай число, яке загадав комп’ютер</h2>
+    <div class="random-box">
     <div class="container">
-        <h2 class="title-random">Вгадай число, яке загадав комп'ютер</h2>
-        <div class="">
-            <form class="random-form">
-                <input class="random-input input" type="text" placeholder="Введіть число" data-guess-input />
-                <button class="random_btn" data-guess-btn type="button">
-                    <svg class="svg-alt svg-stroke-alt" width="15" height="15">
-                        <use href="svg/search.svg"></use>
-                    </svg>
-                </button>
-            </form>
-            <p class="random_text" data-guess-result>Вітаю, ви вгадали число! (number)</p>
-        </div>
+        <input type="number" id="guessInput" placeholder="Введіть число">
+        <button class="random-btn" onclick="checkGuess()"><img src="img/svg/search.svg" class="search-btn" alt="search"></button>
     </div>
+
+    <div id="result" class="result"></div>
+</div>
+    <script>
+        // Генерація випадкового числа від 1 до 10
+        let secretNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            let guess = document.getElementById("guessInput").value;
+            let resultDiv = document.getElementById("result");
+
+            if (!guess) {
+                resultDiv.innerHTML = "Будь ласка, введіть число!";
+                resultDiv.className = "result wrong";
+                return;
+            }
+
+            guess = parseInt(guess);
+
+            if (guess === secretNumber) {
+                resultDiv.innerHTML = `Вітаю, ви вгадали число! (${secretNumber})`;
+                resultDiv.className = "result correct";
+                // Генеруємо нове число для нової гри
+                secretNumber = Math.floor(Math.random() * 10) + 1;
+            } else {
+                resultDiv.innerHTML = "Неправильно, спробуйте ще раз!";
+                resultDiv.className = "result wrong";
+            }
+        }
+    </script>
+
 </section>
-<hr style="width: 536px; height: 1px; border: none" />
+<hr style="width: 536px; height: 1px; border: none; display: flex; align-items: center;" /> 

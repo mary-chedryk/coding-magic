@@ -1,4 +1,27 @@
+.random-box {
+    display: flex;
+}
 .title-random {
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.5px;   
+}
+
+body {
+    text-align: center;
+    margin-top: 50px;
+}
+.container {
+    display: inline-block;
+    position: relative;
+}
+input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -23,9 +46,24 @@
   padding: 10px;
   width: 150px;
   font-size: 12px;
-}
 
+}
 .random-btn {
+
+    padding: 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    height: 44px;
+    left: -40px;
+    bottom: -6px;
+}
+.result {
+    font-size: 12px;
+
   position: absolute;
   padding: 9px;
   border-top-left-radius: 0;
@@ -34,8 +72,18 @@
   justify-content: center;
   align-items: center;
   right: 0;
+
+}
+.correct {
+    color: green;
+
+
+}
+.wrong {
+    color: red;
 }
 
 .random-text {
   color: #039900;
 }
+
