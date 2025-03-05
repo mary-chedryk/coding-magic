@@ -1,41 +1,41 @@
 .title-random {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-    color: var(--text-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  color: var(--text-color);
 }
 
 .random_container {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 36px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 36px;
 }
 
 .random-form {
-    display: flex;
-    align-items: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .random-input {
-    padding: 10px;
-    width: 150px;
-    font-size: 12px;
+  padding: 10px;
+  width: 150px;
+  font-size: 12px;
 }
 
 .random-btn {
-    position: absolute;
-    padding: 9px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 0;
+  position: absolute;
+  padding: 9px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
 }
 
 .random-text {
-    color: #039900;
+  color: #039900;
 }
