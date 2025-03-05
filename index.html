@@ -11,24 +11,25 @@
     />
     
     <title>Coding Magic</title>
-    <script type="module" crossorigin src="/coding-magic/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/coding-magic/assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="/coding-magic/assets/index-bb0cceaf.css">
+    <script type="module" crossorigin src="./commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
+    <link rel="stylesheet" href="./assets/index-6eaeef0f.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
     <div class="header__container">
-      <svg class="header__logo svg svg--stroke" width="95" height="40">
-        <use href="/coding-magic/assets/logo-35ae659c.svg"></use>
-      </svg>
+      <!-- <svg class="header__logo svg svg--stroke" width="95" height="40">
+        <use href="img/svg/logo.svg"></use>
+      </svg> -->
+      <img src="./assets/logo-35ae659c.svg" alt="">
       <nav class="header__nav">
         <ul class="header__nav-list list">
           <li class="header__nav-item">
             <a class="header__nav-link link" data-dropdown-open>
               Інтерактив
               <svg class="header__nav-arrow" width="15" height="15" data-dropdown-arrow>
-                <use href="/coding-magic/assets/arrow-b0162b36.svg"></use>
+                <use href="./assets/arrow-b0162b36.svg"></use>
               </svg>
             </a>
             <ul class="header__dropdown" data-dropdown>
@@ -65,7 +66,7 @@
     </div>
     <div class="header__theme">
       <button type="button" class="header__theme-btn" data-theme-switcher>
-        <img class="header__theme-img header__theme-img--light" src="/coding-magic/assets/sun-9185071d.svg" alt="theme image" />
+        <img class="header__theme-img header__theme-img--light" src="./assets/sun-9185071d.svg" alt="theme image" />
       </button>
       <p class="header__welcome-text" data-welcome-open>Вітаємо, User!</p>
     </div>
@@ -91,22 +92,47 @@
 </section>
 
       <section data-sect="numerical" class="random">
+
+    <h2 class="title-random">Вгадай число, яке загадав комп’ютер</h2>
+    <div class="random-box">
     <div class="container">
-        <h2 class="title-random">Вгадай число, яке загадав комп'ютер</h2>
-        <div class="">
-            <form class="random-form">
-                <input class="random-input input" type="text" placeholder="Введіть число" data-guess-input />
-                <button class="random_btn" data-guess-btn type="button">
-                    <svg class="svg-alt svg-stroke-alt" width="15" height="15">
-                        <use href="svg/search.svg"></use>
-                    </svg>
-                </button>
-            </form>
-            <p class="random_text" data-guess-result>Вітаю, ви вгадали число! (number)</p>
-        </div>
+        <input type="number" id="guessInput" placeholder="Введіть число">
+        <button class="random-btn" onclick="checkGuess()"><img src="./assets/search-3f174def.svg" class="search-btn" alt="search"></button>
     </div>
+
+    <div id="result" class="result"></div>
+</div>
+    <script>
+        // Генерація випадкового числа від 1 до 10
+        let secretNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            let guess = document.getElementById("guessInput").value;
+            let resultDiv = document.getElementById("result");
+
+            if (!guess) {
+                resultDiv.innerHTML = "Будь ласка, введіть число!";
+                resultDiv.className = "result wrong";
+                return;
+            }
+
+            guess = parseInt(guess);
+
+            if (guess === secretNumber) {
+                resultDiv.innerHTML = `Вітаю, ви вгадали число! (${secretNumber})`;
+                resultDiv.className = "result correct";
+                // Генеруємо нове число для нової гри
+                secretNumber = Math.floor(Math.random() * 10) + 1;
+            } else {
+                resultDiv.innerHTML = "Неправильно, спробуйте ще раз!";
+                resultDiv.className = "result wrong";
+            }
+        }
+    </script>
+
 </section>
-<hr style="width: 536px; height: 1px; border: none" />
+<hr style="width: 536px; height: 1px; border: none; display: flex; align-items: center;" /> 
+
       
       
       <section data-sect="numerical" class="time_calculator">
