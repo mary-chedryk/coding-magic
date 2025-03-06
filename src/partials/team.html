@@ -1,23 +1,28 @@
-<section>
+<section class="team">
 
-  <h2 class="title-team">Наша команда</h2>
+  <h2 class="title-random">Наша команда</h2>
 
   <div class="carousel-container">
-    <div class="arrow arrow-left" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="arrow arrow-left" onclick="changeSlide(-1)">
+      <img src="/img/svg/arrow.svg" class="arrow-svg">
+    </div>
+
 
     <div class="slide active">
       <img src="/img/alina.jpg" class="profile-pic" alt="Фото студента">
-      <h3>Марценюк Аліна</h3>
-      <p>Скрам-майстер, розробник</p>
+      <h3 class="name">Марценюк Аліна</h3>
+      <p class="description">Скрам-майстер, розробник</p>
     </div>
 
     <div class="slide active">
       <img src="/img/mariia.png" class="profile-pic" alt="Фото студента">
-      <h3>Чедрик Марія</h3>
-      <p>Тім-лід, розробник</p>
+      <h3 class="name">Чедрик Марія</h3>
+      <p class="description">Тім-лід, розробник</p>
     </div>
 
-    <div class="arrow arrow-right" onclick="changeSlide(1)">&#10095;</div>
+    <div class="arrow arrow-right" onclick="changeSlide(1)">
+      <img src="img/svg/arrow.svg" class="arrow-svg">
+    </div>
   </div>
 
   <div class="dots">
@@ -50,5 +55,7 @@
       dots[currentSlide].classList.add('active');
     }
   </script>
-
+    <div class="line-box">
+      <hr class="random-line" />
+  </div>
 </section>
