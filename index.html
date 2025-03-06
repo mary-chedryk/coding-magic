@@ -13,7 +13,7 @@
     <title>Coding Magic</title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-53cda782.css">
+    <link rel="stylesheet" href="./assets/index-9fbcf1c0.css">
   </head>
   <body>
     <header class="header">
@@ -81,8 +81,13 @@
   <h2 class="title-birthday">Перевір в який рік ти народився</h2>
   <div class="birthday-div">
     <div class="box-input">
-      <input type="number" id="guessInput" placeholder="Введіть число" />
-      <button class="random-btn" onclick="checkGuess()">
+      <input
+        class="birthday-input"
+        type="number"
+        id="guessInput"
+        placeholder="Введіть рік народження"
+      />
+      <button class="random-btn birthday-btn" onclick="checkGuess()">
         <img src="./assets/search-3f174def.svg" class="search-btn" alt="search" />
       </button>
     </div>
