@@ -3,19 +3,18 @@
   height: 220px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.footer-div {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
+// .footer-div {
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+// }
 
 .footer-logo {
   padding-left: 175px;
-  padding-right: 185px;
 }
 
 .footer-text {
@@ -24,7 +23,8 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 170%;
-  padding-right: 187px;
+  padding-right: 180px;
+  padding-left: 180px;
 }
 
 .footer-input {
@@ -35,7 +35,6 @@
   font-size: 12px;
   gap: 10px;
   padding-right: 36px;
-  margin-right: 36px;
 }
 
 .footer-button {
