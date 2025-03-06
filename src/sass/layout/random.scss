@@ -1,55 +1,63 @@
 .random-box {
     display: flex;
 }
-.title-random {
 
+.title-random {
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19.5px;   
+    line-height: 19.5px;
 }
 
 body {
     text-align: center;
     margin-top: 50px;
 }
+
 .container {
     display: inline-block;
     position: relative;
 }
+
 input {
     padding: 10px;
     width: 200px;
     border: 1px solid #ccc;
     border-radius: 20px 0 0 20px;
     outline: none;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-align: center;
-  color: var(--text-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: var(--text-color);
 }
 
 .random_container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 36px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 36px;
 }
 
 .random-form {
-  display: flex;
-  align-items: center;
-  position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.box-input {
+    padding-left: 450px;
 }
 
 .random-input {
-  padding: 10px;
-  width: 150px;
-  font-size: 12px;
+    padding: 10px;
+    width: 150px;
+    font-size: 12px;
 
 }
-.random-btn {
 
+.random-btn {
     padding: 10px;
     border: none;
     background: black;
@@ -57,33 +65,44 @@ input {
     cursor: pointer;
     border-radius: 0 20px 20px 0;
     position: relative;
-    height: 44px;
+    height: 40px;
     left: -40px;
-    bottom: -6px;
+    bottom: -4px;
 }
+
 .result {
     font-size: 12px;
-
-  position: absolute;
-  padding: 9px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 0;
+    position: absolute;
+    padding-right: 450px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
 
 }
+
 .correct {
     color: green;
-
-
 }
+
 .wrong {
     color: red;
 }
 
 .random-text {
-  color: #039900;
+    color: #039900;
 }
 
+.line-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.random-line {
+    width: 536px;
+    border-width: 1px;
+
+}

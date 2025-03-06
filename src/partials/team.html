@@ -1,4 +1,54 @@
-<section class="team container">
-    <h2 class="title-team">Наша команда</h2>
-  <div class="team-slider"></div>
+<section>
+
+  <h2 class="title-team">Наша команда</h2>
+
+  <div class="carousel-container">
+    <div class="arrow arrow-left" onclick="changeSlide(-1)">&#10094;</div>
+
+    <div class="slide active">
+      <img src="/img/alina.jpg" class="profile-pic" alt="Фото студента">
+      <h3>Марценюк Аліна</h3>
+      <p>Скрам-майстер, розробник</p>
+    </div>
+
+    <div class="slide active">
+      <img src="/img/mariia.png" class="profile-pic" alt="Фото студента">
+      <h3>Чедрик Марія</h3>
+      <p>Тім-лід, розробник</p>
+    </div>
+
+    <div class="arrow arrow-right" onclick="changeSlide(1)">&#10095;</div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="setSlide(0)"></span>
+    <span class="dot" onclick="setSlide(1)"></span>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
+
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function setSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+
+      currentSlide = index;
+
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+  </script>
+
 </section>
