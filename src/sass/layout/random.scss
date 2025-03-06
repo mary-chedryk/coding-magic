@@ -31,7 +31,6 @@ input {
     font-weight: 400;
     line-height: normal;
     text-align: center;
-    color: var(--text-color);
 }
 
 .random_container {
@@ -44,10 +43,6 @@ input {
     display: flex;
     align-items: center;
     position: relative;
-}
-
-.box-input {
-    padding-left: 450px;
 }
 
 .random-input {
@@ -72,8 +67,6 @@ input {
 
 .result {
     font-size: 12px;
-    position: absolute;
-    padding-right: 450px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     display: flex;
