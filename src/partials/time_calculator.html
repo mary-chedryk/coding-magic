@@ -1,25 +1,16 @@
 <section data-sect="numerical" class="time_calculator">
-    <div class="container">
-      <h3 class="time-title">Калькулятор часу</h3>
-      <div class="time-box">
-        <form action="" class="time-form">
-          <input
-            class="time-input input"
-            type="text"
-            name="number"
-            id="number"
-            placeholder="Введіть число"
-            data-time-input
-          />
-          <button class="time-btn" data-time-btn>
-            <svg class="svg--alt svg--stroke--alt" width="15" height="15">
-              <use href="src/svg/search.svg"></use>
-            </svg>
-          </button>
-        </form>
-        <hr class="time-hr" />
-        <p class="time-text" data-time-result>3 дн. 15:45:01</p>
+  <div class="container">
+    <h3 class="title-random">Калькулятор часу</h3>
+    <div class="time-box">
+      <div class="box-input">
+        <input type="number" id="guessInput" placeholder="Введіть число">
+        <button class="random-btn" onclick="checkGuess()"><img src="img/svg/search.svg" class="search-btn"
+            alt="search"></button>
       </div>
+      <p class="time-text" data-time-result>3 дн. 15:45:01</p>
     </div>
-  </section>
-  <hr style="width: 536px; height: 1px; border: none" />
+  </div>
+  <div class="line-box">
+    <hr class="random-line" />
+  </div>
+</section>

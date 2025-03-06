@@ -12,7 +12,6 @@
         <div id="result" class="result"></div>
     </div>
     <script>
-        // Генерація випадкового числа від 1 до 10
         let secretNumber = Math.floor(Math.random() * 10) + 1;
 
         function checkGuess() {
@@ -30,7 +29,6 @@
             if (guess === secretNumber) {
                 resultDiv.innerHTML = `Вітаю, ви вгадали число! (${secretNumber})`;
                 resultDiv.className = "result correct";
-                // Генеруємо нове число для нової гри
                 secretNumber = Math.floor(Math.random() * 10) + 1;
             } else {
                 resultDiv.innerHTML = "Неправильно, спробуйте ще раз!";
