@@ -13,7 +13,7 @@
     <title>Coding Magic</title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-6eaeef0f.css">
+    <link rel="stylesheet" href="./assets/index-24cef731.css">
   </head>
   <body>
     <header class="header">
@@ -75,7 +75,9 @@
     <main>
       <section class="popular container">
   <h2 class="title-popular">Популярні інетрактивні ігри</h2>
-  <hr class="line" />
+  <div class="line-box">
+    <hr class="random-line" />
+</div>
 </section>
 
       <section class="birthday container">
@@ -95,13 +97,15 @@
 
     <h2 class="title-random">Вгадай число, яке загадав комп’ютер</h2>
     <div class="random-box">
-    <div class="container">
-        <input type="number" id="guessInput" placeholder="Введіть число">
-        <button class="random-btn" onclick="checkGuess()"><img src="./assets/search-3f174def.svg" class="search-btn" alt="search"></button>
-    </div>
+        <!-- <div class="container box-input"> -->
+        <div class="box-input">
+            <input type="number" id="guessInput" placeholder="Введіть число">
+            <button class="random-btn" onclick="checkGuess()"><img src="./assets/search-3f174def.svg" class="search-btn"
+                    alt="search"></button>
+        </div>
 
-    <div id="result" class="result"></div>
-</div>
+        <div id="result" class="result"></div>
+    </div>
     <script>
         // Генерація випадкового числа від 1 до 10
         let secretNumber = Math.floor(Math.random() * 10) + 1;
@@ -129,10 +133,10 @@
             }
         }
     </script>
-
+    <div class="line-box">
+        <hr class="random-line" />
+    </div>
 </section>
-<hr style="width: 536px; height: 1px; border: none; display: flex; align-items: center;" /> 
-
       
       
       <section data-sect="numerical" class="time_calculator">
@@ -162,9 +166,59 @@
   <hr style="width: 536px; height: 1px; border: none" />
       
       
-      <section class="team container">
-    <h2 class="title-team">Наша команда</h2>
-  <div class="team-slider"></div>
+      <section>
+
+  <h2 class="title-team">Наша команда</h2>
+
+  <div class="carousel-container">
+    <div class="arrow arrow-left" onclick="changeSlide(-1)">&#10094;</div>
+
+    <div class="slide active">
+      <img src="./assets/alina-2f5a2c2f.jpg" class="profile-pic" alt="Фото студента">
+      <h3>Марценюк Аліна</h3>
+      <p>Скрам-майстер, розробник</p>
+    </div>
+
+    <div class="slide active">
+      <img src="./assets/mariia-10e07101.png" class="profile-pic" alt="Фото студента">
+      <h3>Чедрик Марія</h3>
+      <p>Тім-лід, розробник</p>
+    </div>
+
+    <div class="arrow arrow-right" onclick="changeSlide(1)">&#10095;</div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="setSlide(0)"></span>
+    <span class="dot" onclick="setSlide(1)"></span>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
+
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function setSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+
+      currentSlide = index;
+
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+  </script>
+
 </section>
       
       <section class="footetr">
