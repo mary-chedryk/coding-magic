@@ -1,12 +1,15 @@
 <section class="birthday container">
   <h2 class="title-birthday">Перевір в який рік ти народився</h2>
   <div class="birthday-div">
-    <input
-      type="number"
-      placeholder="Введіть рік народження"
-      class="birthday-input"
-    />
+    <div class="box-input">
+      <input type="number" id="guessInput" placeholder="Введіть число" />
+      <button class="random-btn" onclick="checkGuess()">
+        <img src="img/svg/search.svg" class="search-btn" alt="search" />
+      </button>
+    </div>
     <p class="birthday-text">Ви народилися у високосний рік!</p>
   </div>
-  <hr class="line" />
+  <div class="line-box">
+    <hr class="random-line" />
+  </div>
 </section>
