@@ -13,7 +13,7 @@
     <title>Coding Magic</title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-56b121af.css">
+    <link rel="stylesheet" href="./assets/index-926d2c33.css">
   </head>
   <body>
     <header class="header">
@@ -80,14 +80,17 @@
       <section class="birthday container">
   <h2 class="title-birthday">Перевір в який рік ти народився</h2>
   <div class="birthday-div">
-    <input
-      type="number"
-      placeholder="Введіть рік народження"
-      class="birthday-input"
-    />
+    <div class="box-input">
+      <input type="number" id="guessInput" placeholder="Введіть число" />
+      <button class="random-btn" onclick="checkGuess()">
+        <img src="./assets/search-3f174def.svg" class="search-btn" alt="search" />
+      </button>
+    </div>
     <p class="birthday-text">Ви народилися у високосний рік!</p>
   </div>
-  <hr class="line" />
+  <div class="line-box">
+    <hr class="random-line" />
+  </div>
 </section>
 
       <section data-sect="numerical" class="random">
@@ -227,7 +230,7 @@
   </p>
   <div>
     <input type="text" class="footer-input" placeholder="Ваша ел. адреса..." />
-    <button class="footer-button">Підписатись</button>
+    <button type="button" class="footer-button">Підписатись</button>
   </div>
   <p class="footer-p">
     *Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті
