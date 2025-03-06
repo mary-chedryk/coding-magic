@@ -13,7 +13,7 @@
     <title>Coding Magic</title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-9956ad5b.css">
+    <link rel="stylesheet" href="./assets/index-56b121af.css">
   </head>
   <body>
     <header class="header">
@@ -104,7 +104,6 @@
         <div id="result" class="result"></div>
     </div>
     <script>
-        // Генерація випадкового числа від 1 до 10
         let secretNumber = Math.floor(Math.random() * 10) + 1;
 
         function checkGuess() {
@@ -122,7 +121,6 @@
             if (guess === secretNumber) {
                 resultDiv.innerHTML = `Вітаю, ви вгадали число! (${secretNumber})`;
                 resultDiv.className = "result correct";
-                // Генеруємо нове число для нової гри
                 secretNumber = Math.floor(Math.random() * 10) + 1;
             } else {
                 resultDiv.innerHTML = "Неправильно, спробуйте ще раз!";
@@ -137,52 +135,48 @@
       
       
       <section data-sect="numerical" class="time_calculator">
-    <div class="container">
-      <h3 class="time-title">Калькулятор часу</h3>
-      <div class="time-box">
-        <form action="" class="time-form">
-          <input
-            class="time-input input"
-            type="text"
-            name="number"
-            id="number"
-            placeholder="Введіть число"
-            data-time-input
-          />
-          <button class="time-btn" data-time-btn>
-            <svg class="svg--alt svg--stroke--alt" width="15" height="15">
-              <use href="src/svg/search.svg"></use>
-            </svg>
-          </button>
-        </form>
-        <hr class="time-hr" />
-        <p class="time-text" data-time-result>3 дн. 15:45:01</p>
+  <div class="container">
+    <h3 class="title-random">Калькулятор часу</h3>
+    <div class="time-box">
+      <div class="box-input">
+        <input type="number" id="guessInput" placeholder="Введіть число">
+        <button class="random-btn" onclick="checkGuess()"><img src="./assets/search-3f174def.svg" class="search-btn"
+            alt="search"></button>
       </div>
+      <p class="time-text" data-time-result>3 дн. 15:45:01</p>
     </div>
-  </section>
-  <hr style="width: 536px; height: 1px; border: none" />
+  </div>
+  <div class="line-box">
+    <hr class="random-line" />
+  </div>
+</section>
       
       
-      <section>
+      <section class="team">
 
-  <h2 class="title-team">Наша команда</h2>
+  <h2 class="title-random">Наша команда</h2>
 
   <div class="carousel-container">
-    <div class="arrow arrow-left" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="arrow arrow-left" onclick="changeSlide(-1)">
+      <img src="./assets/arrow-b0162b36.svg" class="arrow-svg">
+    </div>
+
 
     <div class="slide active">
       <img src="./assets/alina-2f5a2c2f.jpg" class="profile-pic" alt="Фото студента">
-      <h3>Марценюк Аліна</h3>
-      <p>Скрам-майстер, розробник</p>
+      <h3 class="name">Марценюк Аліна</h3>
+      <p class="description">Скрам-майстер, розробник</p>
     </div>
 
     <div class="slide active">
       <img src="./assets/mariia-10e07101.png" class="profile-pic" alt="Фото студента">
-      <h3>Чедрик Марія</h3>
-      <p>Тім-лід, розробник</p>
+      <h3 class="name">Чедрик Марія</h3>
+      <p class="description">Тім-лід, розробник</p>
     </div>
 
-    <div class="arrow arrow-right" onclick="changeSlide(1)">&#10095;</div>
+    <div class="arrow arrow-right" onclick="changeSlide(1)">
+      <img src="./assets/arrow-b0162b36.svg" class="arrow-svg">
+    </div>
   </div>
 
   <div class="dots">
@@ -215,7 +209,9 @@
       dots[currentSlide].classList.add('active');
     }
   </script>
-
+    <div class="line-box">
+      <hr class="random-line" />
+  </div>
 </section>
       
       <section class="footetr">
