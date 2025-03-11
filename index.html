@@ -14,7 +14,7 @@
   
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-a886497e.css">
+    <link rel="stylesheet" href="./assets/index-3c5ea900.css">
   </head>
   <body class="light-mode"></body>
     <header class="header">
@@ -120,95 +120,85 @@
 
     <h2 class="title-random">Вгадай число, яке загадав комп’ютер</h2>
     <div class="random-box">
-        <!-- <div class="container box-input"> -->
-        <div class="box-input">
-            <input type="number" id="guessInput" placeholder="Введіть число">
-            <button class="random-btn" onclick="checkGuess()"><img src="./assets/search-3f174def.svg" class="search-btn"
-                    alt="search"></button>
+        <div class="guess-game-input-box box-input">
+            <input type="number" id="guess-game-input" placeholder="Введіть число">
+            <button class="random-btn" onclick="checkGuess()">
+                <img src="./assets/search-3f174def.svg" alt="🔍">
+            </button>
         </div>
-
-        <div id="result1" class="result1"></div>
+        <div class="result-box">
+            <p id="guess-game-result" class="random-result"></p>
+        </div>
     </div>
-    <script>
-        let secretNumber = Math.floor(Math.random() * 10) + 1;
-
-        function checkGuess() {
-            let guess = document.getElementById("guessInput").value;
-            let resultDiv = document.getElementById("result1");
-
-            if (!guess) {
-                resultDiv.innerHTML = "Будь ласка, введіть число!";
-                resultDiv.className = "result1 wrong";
-                return;
-            }
-
-            guess = parseInt(guess);
-
-            if (guess === secretNumber) {
-                resultDiv.innerHTML = `Вітаю, ви вгадали число! (${secretNumber})`;
-                resultDiv.className = "result1 correct";
-                secretNumber = Math.floor(Math.random() * 10) + 1;
-            } else {
-                resultDiv.innerHTML = "Неправильно, спробуйте ще раз!";
-                resultDiv.className = "result1 wrong";
-            }
-        }
-    </script>
     <div class="line-box">
         <hr class="random-line" />
     </div>
+
+    <script>
+        const secretNumber = Math.floor(Math.random() * 100) + 1; // Random number between 1 and 100
+
+        function checkGuess() {
+            const input = document.getElementById("guess-game-input").value;
+            const result = document.getElementById("guess-game-result");
+
+            if (input) {
+                const guessedNumber = parseInt(input, 10);
+
+                if (guessedNumber === secretNumber) {
+                    result.textContent = `Вітаю, ви вгадали число! (${secretNumber})`;
+                    result.style.color = "green";
+                } else if (guessedNumber < secretNumber) {
+                    result.textContent = "Спробуйте більше!";
+                    result.style.color = "red";
+                } else {
+                    result.textContent = "Спробуйте менше!";
+                    result.style.color = "red";
+                }
+                result.style.display = "inline";
+            } else {
+                result.textContent = "";
+                result.style.display = "none";
+            }
+        }
+    </script>
 </section>
       
       
       <section data-sect="numerical" class="time_calculator">
-  <div class="container">
-    <h3 class="title-random">Калькулятор часу</h3>
-    <div class="time-box">
-      <form class="box-input" id="timeForm">
-        <input type="number" id="secondsInput" required placeholder="Введіть число">
-        <button class="random-btn" type="submit"><img src="./assets/search-3f174def.svg" class="search-btn"
-            alt="search"></button>
-      </form>
-      <p id="result1"></p>
+  <h3 class="title-random">Калькулятор часу</h3>
+  <div class="time-calculator-container container">
+    <div class="box-input time-calculator-input-box">
+      <input type="number" id="time-calculator-input" placeholder="Введіть число">
+      <button class="random-btn time-calculator-button" onclick="calculateTime()">
+        <img src="./assets/search-3f174def.svg" class="search-btn" alt="search"></button>
     </div>
-    
+    <div class="dots-result-box">
+      <div class="time-dots">--------------------------</div>
+      <span id="time-calculator-result">...</span>
+    </div>
   </div>
 
-<!-- <script>
-  function timeCalculator(seconds) {
-    let days = Math.floor(seconds / (24 * 3600));
-    seconds %= 24 * 3600;
-    let hours = Math.floor(seconds / 3600);
-    seconds %= 3600;
-    let minutes = Math.floor(seconds / 60);
-    seconds %= 60;
-  
-    return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
-  }
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("timeForm");
-    const result = document.getElementById("timeResult");
-  
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      let inputSeconds = parseInt(document.getElementById("secondsInputField").value);
-      if (isNaN(inputSeconds) || inputSeconds < 0) {
-        result.textContent = "Please enter a valid number of seconds.";
+
+  <script>
+    function calculateTime() {
+      const input = document.getElementById("time-calculator-input").value;
+      const result = document.getElementById("time-calculator-result");
+
+      if (input) {
+        const totalSeconds = parseInt(input, 10);
+        const days = Math.floor(totalSeconds / (24 * 3600));
+        const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        result.textContent = `${days} дн. ${hours}:${minutes}:${seconds}`;
+        result.style.display = "inline";
       } else {
-        result.textContent = timeCalculator(inputSeconds);
+        result.textContent = "...";
+        result.style.display = "none";
       }
-    });
-  });
-</script>
-    <form id="timeForm">
-      <label for="secondsInputField">Enter seconds:</label>
-      <input type="number" id="secondsInputField" required>
-      <button type="submit">Calculate</button>
-    </form>
-    <p id="timeResult"></p> -->
-  
-  
+    }
+  </script>
 
 
   <div class="line-box">
