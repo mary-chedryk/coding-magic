@@ -2,14 +2,53 @@
   <div class="container">
     <h3 class="title-random">Калькулятор часу</h3>
     <div class="time-box">
-      <div class="box-input">
-        <input type="number" id="guessInput" placeholder="Введіть число">
-        <button class="random-btn" onclick="checkGuess()"><img src="img/svg/search.svg" class="search-btn"
+      <form class="box-input" id="timeForm">
+        <input type="number" id="secondsInput" required placeholder="Введіть число">
+        <button class="random-btn" type="submit"><img src="img/svg/search.svg" class="search-btn"
             alt="search"></button>
-      </div>
-      <p class="time-text" data-time-result>3 дн. 15:45:01</p>
+      </form>
+      <p id="result1"></p>
     </div>
+    
   </div>
+
+<!-- <script>
+  function timeCalculator(seconds) {
+    let days = Math.floor(seconds / (24 * 3600));
+    seconds %= 24 * 3600;
+    let hours = Math.floor(seconds / 3600);
+    seconds %= 3600;
+    let minutes = Math.floor(seconds / 60);
+    seconds %= 60;
+  
+    return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("timeForm");
+    const result = document.getElementById("timeResult");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let inputSeconds = parseInt(document.getElementById("secondsInputField").value);
+      if (isNaN(inputSeconds) || inputSeconds < 0) {
+        result.textContent = "Please enter a valid number of seconds.";
+      } else {
+        result.textContent = timeCalculator(inputSeconds);
+      }
+    });
+  });
+</script>
+    <form id="timeForm">
+      <label for="secondsInputField">Enter seconds:</label>
+      <input type="number" id="secondsInputField" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <p id="timeResult"></p> -->
+  
+  
+
+
   <div class="line-box">
     <hr class="random-line" />
   </div>

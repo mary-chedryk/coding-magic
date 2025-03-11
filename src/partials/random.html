@@ -9,18 +9,18 @@
                     alt="search"></button>
         </div>
 
-        <div id="result" class="result"></div>
+        <div id="result1" class="result1"></div>
     </div>
     <script>
         let secretNumber = Math.floor(Math.random() * 10) + 1;
 
         function checkGuess() {
             let guess = document.getElementById("guessInput").value;
-            let resultDiv = document.getElementById("result");
+            let resultDiv = document.getElementById("result1");
 
             if (!guess) {
                 resultDiv.innerHTML = "Будь ласка, введіть число!";
-                resultDiv.className = "result wrong";
+                resultDiv.className = "result1 wrong";
                 return;
             }
 
@@ -28,11 +28,11 @@
 
             if (guess === secretNumber) {
                 resultDiv.innerHTML = `Вітаю, ви вгадали число! (${secretNumber})`;
-                resultDiv.className = "result correct";
+                resultDiv.className = "result1 correct";
                 secretNumber = Math.floor(Math.random() * 10) + 1;
             } else {
                 resultDiv.innerHTML = "Неправильно, спробуйте ще раз!";
-                resultDiv.className = "result wrong";
+                resultDiv.className = "result1 wrong";
             }
         }
     </script>
