@@ -1,5 +1,6 @@
 .random-box {
     display: flex;
+    padding-bottom: 30px;
 }
 
 .title-random {
@@ -48,8 +49,9 @@ input {
 .random-input {
     padding: 10px;
     width: 150px;
+    font-weight: 400;
     font-size: 12px;
-
+    line-height: 14.63px;
 }
 
 .random-btn {
@@ -65,26 +67,15 @@ input {
     bottom: -4px;
 }
 
-.result1 {
-    font-size: 12px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+.random-result {
+font-size: 12px;
+line-height: 14.63px;
+}
+.result-box {
     display: flex;
-    justify-content: center;
     align-items: center;
-    right: 0;
-}
-
-.correct {
-    color: green;
-}
-
-.wrong {
-    color: red;
-}
-
-.random-text {
-    color: #039900;
+    justify-content: center;
+    margin-left: 150px;
 }
 
 .line-box {
@@ -96,5 +87,4 @@ input {
 .random-line {
     width: 536px;
     border-width: 1px;
-
 }
