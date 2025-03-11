@@ -1,5 +1,5 @@
-.birthday {
-}
+.birthday {}
+
 .title-birthday {
   color: #000;
   font-family: "Montserrat Alternates";
@@ -24,6 +24,11 @@
   left: -96px !important;
 }
 
+.b-day-btn {
+  height: 42px !important;
+  bottom: -6px !important;
+}
+
 .birthday-text {
   color: #039900;
   text-align: right;
@@ -31,6 +36,7 @@
   font-size: 12px;
   font-weight: 400;
 }
+
 .birthday-div {
   padding-bottom: 36px;
   display: flex;

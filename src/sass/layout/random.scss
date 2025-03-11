@@ -27,7 +27,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 20px 0 0 20px;
     outline: none;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -62,15 +62,16 @@ input {
     cursor: pointer;
     border-radius: 0 20px 20px 0;
     position: relative;
-    height: 40px;
+    height: 35px;
     left: -40px;
     bottom: -4px;
 }
 
 .random-result {
-font-size: 12px;
-line-height: 14.63px;
+    font-size: 12px;
+    line-height: 14.63px;
 }
+
 .result-box {
     display: flex;
     align-items: center;
@@ -87,4 +88,7 @@ line-height: 14.63px;
 .random-line {
     width: 536px;
     border-width: 1px;
+    stroke: #000000;
+
+
 }
