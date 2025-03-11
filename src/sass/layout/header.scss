@@ -2,8 +2,8 @@
     padding: 20px 0;
 
     .container1 {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 90px;
+        padding-right: 90px;
         padding-top: 30px;
         display: flex;
         align-items: center;
@@ -149,5 +149,35 @@
             cursor: var(--cursor);
             color: var(--accent-color);
         }
+    }
+
+    .dark-mode {
+        background: #121212;
+        color: white;
+    }
+    .theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 60px;
+        height: 30px;
+        background: grey;
+        border-radius: 15px;
+        cursor: pointer;
+        position: relative;
+        padding: 3px;
+    }
+    .theme-toggle img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        transition: transform 0.3s;
+    }
+    .light-mode .theme-toggle img {
+        transform: translateX(5px);
+    }
+    .dark-mode .theme-toggle img {
+        transform: translateX(30px);
     }
 }

@@ -43,11 +43,28 @@
         </ul>
       </nav>
     </div>
-    <div class="header__theme">
-      <button type="button" class="header__theme-btn" data-theme-switcher>
-        <img class="header__theme-img header__theme-img--light" src="./img/svg/sun.svg" alt="theme image" />
-      </button>
-      <p class="header__welcome-text" data-welcome-open>Вітаємо, User!</p>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <img src="./img/svg/sun.svg" alt="Light Mode" id="theme-icon">
     </div>
+
+    <script>
+      function toggleTheme() {
+        const body = document.body;
+        const themeIcon = document.getElementById('theme-icon');
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('dark-mode')) {
+          themeIcon.src = "./img/svg/moon.svg"; // Change to moon icon
+          themeIcon.alt = "Dark Mode";
+        } else {
+          themeIcon.src = "./img/svg/sun.svg"; // Change to sun icon
+          themeIcon.alt = "Light Mode";
+        }
+      }
+    </script>
+
+    <p class="header__welcome-text" data-welcome-open>Вітаємо, User!</p>
   </div>
 </header>
