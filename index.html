@@ -11,11 +11,12 @@
     />
     
     <title>Coding Magic</title>
+  
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-00099408.css">
+    <link rel="stylesheet" href="./assets/index-a886497e.css">
   </head>
-  <body>
+  <body class="light-mode"></body>
     <header class="header">
   <div class="container1">
     <div class="header__container">
@@ -61,12 +62,29 @@
         </ul>
       </nav>
     </div>
-    <div class="header__theme">
-      <button type="button" class="header__theme-btn" data-theme-switcher>
-        <img class="header__theme-img header__theme-img--light" src="./assets/sun-9185071d.svg" alt="theme image" />
-      </button>
-      <p class="header__welcome-text" data-welcome-open>Вітаємо, User!</p>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <img src="./assets/sun-9185071d.svg" alt="Light Mode" id="theme-icon">
     </div>
+
+    <script>
+      function toggleTheme() {
+        const body = document.body;
+        const themeIcon = document.getElementById('theme-icon');
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('dark-mode')) {
+          themeIcon.src = "./img/svg/moon.svg"; // Change to moon icon
+          themeIcon.alt = "Dark Mode";
+        } else {
+          themeIcon.src = "./img/svg/sun.svg"; // Change to sun icon
+          themeIcon.alt = "Light Mode";
+        }
+      }
+    </script>
+
+    <p class="header__welcome-text" data-welcome-open>Вітаємо, User!</p>
   </div>
 </header>
     <main>
@@ -109,18 +127,18 @@
                     alt="search"></button>
         </div>
 
-        <div id="result" class="result"></div>
+        <div id="result1" class="result1"></div>
     </div>
     <script>
         let secretNumber = Math.floor(Math.random() * 10) + 1;
 
         function checkGuess() {
             let guess = document.getElementById("guessInput").value;
-            let resultDiv = document.getElementById("result");
+            let resultDiv = document.getElementById("result1");
 
             if (!guess) {
                 resultDiv.innerHTML = "Будь ласка, введіть число!";
-                resultDiv.className = "result wrong";
+                resultDiv.className = "result1 wrong";
                 return;
             }
 
@@ -128,11 +146,11 @@
 
             if (guess === secretNumber) {
                 resultDiv.innerHTML = `Вітаю, ви вгадали число! (${secretNumber})`;
-                resultDiv.className = "result correct";
+                resultDiv.className = "result1 correct";
                 secretNumber = Math.floor(Math.random() * 10) + 1;
             } else {
                 resultDiv.innerHTML = "Неправильно, спробуйте ще раз!";
-                resultDiv.className = "result wrong";
+                resultDiv.className = "result1 wrong";
             }
         }
     </script>
@@ -146,14 +164,53 @@
   <div class="container">
     <h3 class="title-random">Калькулятор часу</h3>
     <div class="time-box">
-      <div class="box-input">
-        <input type="number" id="guessInput" placeholder="Введіть число">
-        <button class="random-btn" onclick="checkGuess()"><img src="./assets/search-3f174def.svg" class="search-btn"
+      <form class="box-input" id="timeForm">
+        <input type="number" id="secondsInput" required placeholder="Введіть число">
+        <button class="random-btn" type="submit"><img src="./assets/search-3f174def.svg" class="search-btn"
             alt="search"></button>
-      </div>
-      <p class="time-text" data-time-result>3 дн. 15:45:01</p>
+      </form>
+      <p id="result1"></p>
     </div>
+    
   </div>
+
+<!-- <script>
+  function timeCalculator(seconds) {
+    let days = Math.floor(seconds / (24 * 3600));
+    seconds %= 24 * 3600;
+    let hours = Math.floor(seconds / 3600);
+    seconds %= 3600;
+    let minutes = Math.floor(seconds / 60);
+    seconds %= 60;
+  
+    return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("timeForm");
+    const result = document.getElementById("timeResult");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let inputSeconds = parseInt(document.getElementById("secondsInputField").value);
+      if (isNaN(inputSeconds) || inputSeconds < 0) {
+        result.textContent = "Please enter a valid number of seconds.";
+      } else {
+        result.textContent = timeCalculator(inputSeconds);
+      }
+    });
+  });
+</script>
+    <form id="timeForm">
+      <label for="secondsInputField">Enter seconds:</label>
+      <input type="number" id="secondsInputField" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <p id="timeResult"></p> -->
+  
+  
+
+
   <div class="line-box">
     <hr class="random-line" />
   </div>
@@ -170,7 +227,7 @@
     </div>
 
 
-    <div class="slide active">
+    <div class="slide">
       <img src="./assets/alina-2f5a2c2f.jpg" class="profile-pic" alt="Фото студента">
       <h3 class="name">Марценюк Аліна</h3>
       <p class="description">Скрам-майстер, розробник</p>
