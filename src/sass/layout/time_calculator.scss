@@ -1,18 +1,9 @@
-.time-box {
+.time-calculator-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 36px;
-    gap: 33px;
+    padding-bottom: 30px;
 }
 
-.time-form {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.time-input {
+.time-calculator-input {
     padding: 10px;
     width: 150px;
     font-size: 12px;
@@ -27,4 +18,17 @@
     justify-content: center;
     align-items: center;
     right: 0;
+}
+.dots-result-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time-calculator-result {
+   padding-left: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.63px;
+    display: none;
 }
