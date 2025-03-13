@@ -155,6 +155,7 @@
         background: #808080;
         color: white;
     }
+
     .theme-toggle {
         display: flex;
         align-items: center;
@@ -167,6 +168,7 @@
         position: relative;
         padding: 3px;
     }
+
     .theme-toggle img {
         width: 24px;
         height: 24px;
@@ -174,9 +176,11 @@
         position: absolute;
         transition: transform 0.3s;
     }
+
     .light-mode .theme-toggle img {
         transform: translateX(5px);
     }
+
     .dark-mode .theme-toggle img {
         transform: translateX(30px);
     }
