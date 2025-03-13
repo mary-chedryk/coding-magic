@@ -8,10 +8,10 @@ function findMax() {
     c = Number(c);
 
     if (isNaN(a) || isNaN(b) || isNaN(c)) {
-        document.getElementById("result").textContent = "Будь ласка, введіть числа.";
+        document.getElementById("numbers-result").textContent = "Будь ласка, введіть числа.";
         return;
     }
 
     let maxNumber = Math.max(a, b, c);
-    document.getElementById("result").textContent = maxNumber;
+    document.getElementById("numbers-result").textContent = maxNumber;
 }
