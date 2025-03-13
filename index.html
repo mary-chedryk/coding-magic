@@ -13,7 +13,7 @@
     <title>Coding Magic</title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-f577f2d1.css">
+    <link rel="stylesheet" href="./assets/index-18e1315d.css">
   </head>
   <body class="light-mode">
     <div id="myModal" class="modal">
@@ -25,10 +25,15 @@
             Бажаємо Вам гарно провести час!</p>
         <p class="modal-text modal-ask">Введіть своє ім’я:</p>
         <div> <input type="name" id="guess-game-input" placeholder="Ваше ім’я..." class="modal-input"></div>
-        <div> <button class="modal-btn">Зберегти</button></div>
+        <div> <button class="modal-btn" id="myBtn">Зберегти</button></div>
     </div>
 </div>
 
+<div id="thankyou-modal" class="modal thankyou-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modal-text">Привіт!</p>
+    </div>
 </div>
     <header class="header">
   <div class="container1">
@@ -97,7 +102,6 @@
         }
       }
     </script>
-    <button id="myBtn">Open Modal</button>
     <p class="header__welcome-text" data-welcome-open>Вітаємо, User!</p>
   </div>
 </header>
@@ -226,7 +230,7 @@
 </section>
 
       
-      <section class="numbers container">
+      <section class="numbers">
   <h2 class="numbers-title">Введіть 3 числа</h2>
   <input
     id="number1"
@@ -279,6 +283,12 @@
       <p class="description">Тім-лід, розробник</p>
     </div>
 
+    <div class="slide">
+      <img src="" class="profile-pic" alt="Фото студента">
+      <h3 class="name">Святослав</h3>
+      <p class="description">Розробник</p>
+    </div>
+
     <div class="arrow arrow-right" onclick="changeSlide(1)">
       <img src="./assets/arrow-b0162b36.svg" class="arrow-svg">
     </div>
@@ -286,6 +296,7 @@
 
   <div class="dots">
     <span class="dot active" onclick="setSlide(0)"></span>
+    <span class="dot" onclick="setSlide(1)"></span>
     <span class="dot" onclick="setSlide(1)"></span>
   </div>
 
