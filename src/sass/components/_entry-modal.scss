@@ -1,5 +1,5 @@
 .modal {
-    display: none;
+    display: block;
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
@@ -74,4 +74,9 @@
 
 .modal-input {
     margin-bottom: 10px;
+}
+
+.thankyou-modal {
+    display: none !important;
+
 }

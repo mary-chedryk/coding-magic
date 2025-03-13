@@ -23,3 +23,12 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+
+
+//-------thank you modal---------
+
+
+var thankyou_modal = document.getElementById("thankyou-modal");
+
+var save_btn = document.getElementById("myBtn");
