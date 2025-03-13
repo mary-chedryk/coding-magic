@@ -13,9 +13,23 @@
     <title>Coding Magic</title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-66dfc47b.css">
+    <link rel="stylesheet" href="./assets/index-7d71ee22.css">
   </head>
   <body class="light-mode">
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modal-text">Привіт!</p>
+        <p class="modal-text">Ви потрапили на сайт інтерактивних ігор та завдань
+            Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+            Бажаємо Вам гарно провести час!</p>
+        <p class="modal-text modal-ask">Введіть своє ім’я:</p>
+        <div> <input type="name" id="guess-game-input" placeholder="Ваше ім’я..." class="modal-input"></div>
+        <div> <button class="modal-btn">Зберегти</button></div>
+    </div>
+</div>
+
+</div>
     <header class="header">
   <div class="container1">
     <div class="header__container">
@@ -70,19 +84,20 @@
       function toggleTheme() {
         const body = document.body;
         const themeIcon = document.getElementById('theme-icon');
-        body.classList.toggle('dark-mode');
-        body.classList.toggle('light-mode');
-
         if (body.classList.contains('dark-mode')) {
-          themeIcon.src = "./img/svg/moon.svg"; // Change to moon icon
-          themeIcon.alt = "Dark Mode";
-        } else {
+          body.classList.remove('dark-mode');
+          body.classList.add('light-mode');
           themeIcon.src = "./img/svg/sun.svg"; // Change to sun icon
           themeIcon.alt = "Light Mode";
+        } else {
+          body.classList.remove('light-mode');
+          body.classList.add('dark-mode');
+          themeIcon.src = "./img/svg/moon.svg"; // Change to moon icon
+          themeIcon.alt = "Dark Mode";
         }
       }
     </script>
-
+    <button id="myBtn">Open Modal</button>
     <p class="header__welcome-text" data-welcome-open>Вітаємо, User!</p>
   </div>
 </header>
