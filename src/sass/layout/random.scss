@@ -32,6 +32,16 @@ input {
   font-weight: 400;
   line-height: normal;
   text-align: center;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
 }
 
 .random_container {
@@ -65,12 +75,25 @@ input {
   height: 40px;
   left: -40px;
   bottom: -4px;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  height: 35px;
+  left: -40px;
+  bottom: -4px;
 }
 
 .random-result {
   font-size: 12px;
   line-height: 14.63px;
+  font-size: 12px;
+  line-height: 14.63px;
 }
+
 .result-box {
   display: flex;
   align-items: center;
@@ -87,5 +110,5 @@ input {
 .random-line {
   width: 536px;
   border-width: 1px;
-  opacity: none;
+  stroke: #000000;
 }
