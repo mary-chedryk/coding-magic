@@ -1,6 +1,7 @@
 // Import all of Bootstrap's CSS
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+@import "./components/entry-modal";
 @import "./layout/header";
 @import "./layout/popular";
 @import "./layout/birthday";
