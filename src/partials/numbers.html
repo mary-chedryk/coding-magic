@@ -1,7 +1,27 @@
 <section class="numbers">
   <h2 class="numbers-title">Введіть 3 числа</h2>
-  <input type="number" class="numbers-input-1" placeholder="Введіть число" />
-  <input type="number" class="numbers-input-2" placeholder="Введіть число" />
-  <input type="number" class="numbers-input-3" placeholder="Введіть число" />
-  <p class="number-text">Найбільше число, яке ви ввели - (число)</p>
+  <input
+    id="number1"
+    type="number"
+    class="numbers-input-1"
+    placeholder="Введіть число"
+    oninput="findMax()"
+  />
+  <input
+    id="number2"
+    type="number"
+    class="numbers-input-2"
+    placeholder="Введіть число"
+    oninput="findMax()"
+  />
+  <input
+    id="number3"
+    type="number"
+    class="numbers-input-3"
+    placeholder="Введіть число"
+    oninput="findMax()"
+  />
+  <p class="number-text">
+    Найбільше число, яке ви ввели - <span id="result"></span>
+  </p>
 </section>
