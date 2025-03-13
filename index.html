@@ -13,7 +13,7 @@
     <title>Coding Magic</title>
     <script type="module" crossorigin src="./commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-6837a909.js">
-    <link rel="stylesheet" href="./assets/index-7d71ee22.css">
+    <link rel="stylesheet" href="./assets/index-4c81758e.css">
   </head>
   <body class="light-mode">
     <div id="myModal" class="modal">
@@ -102,14 +102,14 @@
   </div>
 </header>
     <main>
-      <section class="popular container">
+      <section class="popular">
   <h2 class="title-popular">Популярні інетрактивні ігри</h2>
   <div class="line-box">
     <hr class="random-line" />
 </div>
 </section>
 
-      <section class="birthday container">
+      <section class="birthday">
   <h2 class="title-birthday">Перевір в який рік ти народився</h2>
   <div class="birthday-div">
     <div class="box-input">
@@ -130,11 +130,11 @@
   </div>
 </section>
 
-      <section data-sect="numerical" class="random container">
+      <section data-sect="numerical" class="random">
 
     <h2 class="title-random">Вгадай число, яке загадав комп’ютер</h2>
     <div class="random-box">
-        <div class="guess-game-input-box box-input">
+        <div class="guess-game-input-box box-input box-input2">
             <input type="number" id="guess-game-input" placeholder="Введіть число">
             <button class="random-btn" onclick="checkGuess()">
                 <img src="./assets/search-3f174def.svg" alt="🔍">
@@ -180,8 +180,8 @@
       
       <section data-sect="numerical" class="time_calculator">
   <h3 class="title-random">Калькулятор часу</h3>
-  <div class="time-calculator-container container">
-    <div class="box-input time-calculator-input-box">
+  <div class="time-calculator-container">
+    <div class="box-input box-input2 time-calculator-input-box">
       <input type="number" id="time-calculator-input" placeholder="Введіть число">
       <button class="random-btn time-calculator-button" onclick="calculateTime()">
         <img src="./assets/search-3f174def.svg" class="search-btn" alt="search"></button>
@@ -221,6 +221,37 @@
 </section>
       
       
+      <section class="numbers container">
+  <h2 class="numbers-title">Введіть 3 числа</h2>
+  <input
+    id="number1"
+    type="number"
+    class="numbers-input-1"
+    placeholder="Введіть число"
+    oninput="findMax()"
+  />
+  <input
+    id="number2"
+    type="number"
+    class="numbers-input-2"
+    placeholder="Введіть число"
+    oninput="findMax()"
+  />
+  <input
+    id="number3"
+    type="number"
+    class="numbers-input-3"
+    placeholder="Введіть число"
+    oninput="findMax()"
+  />
+  <p class="number-text">
+    Найбільше число, яке ви ввели - <span id="numbers-result"></span>
+  </p>
+  <div class="line-box">
+    <hr class="random-line" />
+  </div>
+</section>
+
       <section class="team">
 
   <h2 class="title-random">Наша команда</h2>
@@ -278,41 +309,7 @@
       dots[currentSlide].classList.add('active');
     }
   </script>
-    <div class="line-box">
-      <hr class="random-line" />
-  </div>
 </section>
-      <section class="numbers container">
-  <h2 class="numbers-title">Введіть 3 числа</h2>
-  <input
-    id="number1"
-    type="number"
-    class="numbers-input-1"
-    placeholder="Введіть число"
-    oninput="findMax()"
-  />
-  <input
-    id="number2"
-    type="number"
-    class="numbers-input-2"
-    placeholder="Введіть число"
-    oninput="findMax()"
-  />
-  <input
-    id="number3"
-    type="number"
-    class="numbers-input-3"
-    placeholder="Введіть число"
-    oninput="findMax()"
-  />
-  <p class="number-text">
-    Найбільше число, яке ви ввели - <span id="numbers-result"></span>
-  </p>
-  <div class="line-box">
-    <hr class="random-line" />
-  </div>
-</section>
-
       
     </main>
     <section class="footetr">
