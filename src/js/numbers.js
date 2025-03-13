@@ -3,11 +3,6 @@ function findMax() {
     let b = document.getElementById("number2").value;
     let c = document.getElementById("number3").value;
 
-    if (a === ""||  b === ""||  c === "") {
-        document.getElementById("result").textContent = "Будь ласка, заповніть всі поля.";
-        return;
-    }
-
     a = Number(a);
     b = Number(b);
     c = Number(c);
@@ -18,6 +13,5 @@ function findMax() {
     }
 
     let maxNumber = Math.max(a, b, c);
-
     document.getElementById("result").textContent = maxNumber;
 }
