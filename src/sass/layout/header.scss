@@ -151,11 +151,6 @@
         }
     }
 
-    .dark-mode {
-        background-color: #808080;
-        color: white;
-    }
-
     .theme-toggle {
         display: flex;
         align-items: center;
@@ -184,4 +179,17 @@
     .dark-mode .theme-toggle img {
         transform: translateX(30px);
     }
+}
+
+.dark-mode {
+    background-color: #9a9898;
+}
+
+.dark-mode .header {
+    background: #c2c2c2;
+    color: white;
+}
+
+.dark-mode main {
+    background-color: #aeadad;
 }
