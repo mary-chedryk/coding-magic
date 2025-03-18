@@ -11,3 +11,9 @@ import './js/football.js';
 import './js/numbers.js';
 import './js/team.js';
 import './js/scientist.js';
+
+import { findMax } from "./js/numbers.js";
+
+document.querySelectorAll(".numbers-input-1, .numbers-input-2, .numbers-input-3").forEach(input => {
+    input.addEventListener("input", findMax);
+});
