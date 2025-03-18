@@ -53,7 +53,6 @@ function update() {
         // Перевірка на зіткнення
         if (dino.x < obs.x + obs.width && dino.x + dino.width > obs.x && dino.y + dino.height > obs.y) {
             gameOver = true;
-            alert("Game Over! Refresh to restart.");
         }
     });
 
