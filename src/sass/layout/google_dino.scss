@@ -13,12 +13,13 @@ canvas {
 }
 
 /* Точно вказуємо, що зміни стосуються лише заголовка h1 з класом title-random */
-h1.title-random {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    font-size: 28px; /* Зменшено розмір заголовка */
-    color: #333;
-    margin-bottom: 20px;
+.title-dino {
+    font-family: Montserrat Alternates;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
 }
 
 /* Стилі для кнопки рестарт */
@@ -50,14 +51,8 @@ h1.title-random {
     display: none;
 }
 
-/* Стилі для лінії */
-.line-box {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.random-line {
-    border: 1px solid #ddd;
-    width: 50%;
-    margin: 0 auto;
+.box-dino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
