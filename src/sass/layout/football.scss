@@ -8,8 +8,8 @@ body {
 
 #field {
     position: relative;
-    width: 600px;
-    height: 300px;
+    width: 400px; /* Зменшено розмір поля */
+    height: 200px; /* Зменшено висоту поля */
     background: green;
     border-radius: 20px;
     margin: 50px auto;
@@ -30,13 +30,26 @@ body {
 
 #ball {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: white; /* Білий колір м'яча */
-    border-radius: 50%; /* Робимо м'яч круглим */
-    border: 2px solid black; /* Чорна обводка */
+    width: 30px; /* Розмір м'яча зменшено */
+    height: 30px; /* Розмір м'яча зменшено */
+    background-image: url('img/football.img'); /* Замінено колір на картинку */
+    background-size: cover; /* Картинка покриває весь елемент */
+    border-radius: 50%;
+    border: 2px solid black;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+}
+
+h1 {
+    font-size: 24px; /* Зменшений розмір заголовка */
+}
+
+.line-box {
+    margin: 20px 0;
+}
+
+.random-line {
+    border: 1px dashed #333;
 }
