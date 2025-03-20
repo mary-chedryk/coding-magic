@@ -8,16 +8,56 @@ canvas {
     margin: auto;
     background-color: white;
     border-bottom: 2px solid black; /* Додаємо землю */
+    width: 500px; /* Зменшена ширина гри */
+    height: 150px; /* Зменшена висота гри */
 }
 
-button {
-    margin-top: 20px;
+/* Точно вказуємо, що зміни стосуються лише заголовка h1 з класом title-random */
+h1.title-random {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px; /* Зменшено розмір заголовка */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стилі для кнопки рестарт */
+.restart-btn {
+    display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
+    background-color: #808080; /* Змінили на сірий колір */
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.restart-btn:hover {
+    background-color: #707070; /* Темніший відтінок сірого на hover */
+    transform: scale(1.05);
+}
+
+.restart-btn:active {
+    background-color: #606060; /* Ще темніший відтінок сірого на натискання */
+    transform: scale(0.98);
 }
 
 /* Ховаємо картинки */
 #dinoImage, #cactusImage {
     display: none;
+}
+
+/* Стилі для лінії */
+.line-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.random-line {
+    border: 1px solid #ddd;
+    width: 50%;
+    margin: 0 auto;
 }

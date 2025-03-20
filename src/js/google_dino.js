@@ -12,7 +12,8 @@ function resetGame() {
     frame = 0;
     score = 0;
     gameOver = false;
-    restartButton.style.display = "none";
+    restartButton.style.display = "none"; // Сховати кнопку рестарту на початку
+    restartButton.classList.remove("restart-btn"); // Убираємо клас стилю кнопки
     update();
 }
 
@@ -62,7 +63,8 @@ function update() {
 
         if (dino.x < obs.x + obs.width && dino.x + dino.width > obs.x && dino.y + dino.height > obs.y) {
             gameOver = true;
-            restartButton.style.display = "block";
+            restartButton.style.display = "block"; // Показуємо кнопку рестарту
+            restartButton.classList.add("restart-btn"); // Додаємо клас стилю кнопки
         }
     });
 
