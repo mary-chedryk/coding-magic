@@ -2,8 +2,22 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
 }
+
 canvas {
-    background-color: lightgray;
     display: block;
     margin: auto;
+    background-color: white;
+    border-bottom: 2px solid black; /* Додаємо землю */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Ховаємо картинки */
+#dinoImage, #cactusImage {
+    display: none;
 }
