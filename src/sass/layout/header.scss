@@ -28,6 +28,9 @@
         &-item {
             position: relative;
         }
+        &-item:hover {
+            color: #8ACECF;
+        }
 
         &-link {
             color: var(--text-color);
